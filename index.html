@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title> Duration Carousal </title>
+</head>
+<body>
+    <div>
+        <form class="mt-12 mx-20">
+            <label for="duration"> Duration : </label>
+            <input id="timer" class="duration ml-6 py-0.5 px-2 border border-gray-400 rounded-lg outline-none text-sm" name="duration" type="number" />
+            <div class="flex items-center mt-4">
+                <p class="mr-6"> Direction : </p>
+                <input id="forward" class="forward mr-2" name="direction" type="radio" />
+                <label for="direction" class="mr-6"> Forward </label>
+                <input id="reverse" class="reverse mr-2" name="direction" type="radio" />
+                <label for="direction"> Reverse </label>
+            </div>
+            <br>
+            <button onclick="return duration_slide()" class="border border-gray-400 py-0.5 px-3 rounded-lg"> Submit </button>
+        </form>
+        <div class="relative mt-12 mx-20">
+            <img id="main-image" src="https://images.unsplash.com/photo-1652903429922-b2e30e69a97f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870"
+            class="w-full h-96 object-cover object-center rounded-xl shadow-xl " />
+            <div class="flex absolute w-full justify-between top-1/2">
+                <button onclick="show_image('left')"> <i class="fa-solid fa-angle-left bg-white p-2 px-4 rounded-r-xl"></i> </button>
+                <button onclick="show_image('right')"> <i class="fa-solid fa-angle-right bg-white p-2 px-4 rounded-l-xl"></i> </button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js" ></script>
+</body>
+</html>
